@@ -5,7 +5,7 @@ Created on Wed Apr 13 23:29:54 2022
 @author: zahra 
 tic_tac_toe
 """
-
+import time
 
 a=[['- ','- ','- ']
    ,['- ','- ','- ']
@@ -20,9 +20,10 @@ def chek_free(row,col):
     if a[row][col]=='- ':
         return True
     return False
-    
+  
 
 board()
+start=time.time()
 while True:
     while True:
         print("player 1:")
@@ -45,3 +46,6 @@ while True:
         else :
             print("dont select this row and col")
     board()
+end=time.time() 
+time_play=end-start
+print("your time is: ",time_play)   
